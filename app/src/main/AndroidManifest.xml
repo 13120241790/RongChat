@@ -95,7 +95,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"></activity>
 
-        <activity android:name=".circle.PublishFriendshipActivity"
+        <activity
+            android:name=".circle.PublishFriendshipActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"></activity>
+
+        <activity
+            android:name=".activity.SettingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"></activity>
 

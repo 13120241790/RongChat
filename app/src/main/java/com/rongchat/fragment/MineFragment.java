@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 
 import com.rongchat.R;
 import com.rongchat.activity.MyInfoActivity;
+import com.rongchat.activity.SettingActivity;
 
 /**
  * Created by AMing on 16/3/24.
@@ -27,7 +28,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         return instance;
     }
 
-    private RelativeLayout myInfo;
+    private RelativeLayout myInfo ,setting;
 
     private View mView;
     @Nullable
@@ -35,7 +36,9 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.rs_mine_fragment, null);
         myInfo = (RelativeLayout) mView.findViewById(R.id.re_myinfo);
+        setting = (RelativeLayout) mView.findViewById(R.id.re_setting);
         myInfo.setOnClickListener(this);
+        setting.setOnClickListener(this);
         return mView;
     }
 
@@ -44,6 +47,9 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.re_myinfo:
                 startActivity(new Intent(getActivity(),MyInfoActivity.class));
+                break;
+            case R.id.re_setting:
+                startActivity(new Intent(getActivity(),SettingActivity.class));
                 break;
         }
     }
